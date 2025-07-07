@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: radial-gradient(circle at center, #0b0f1a 0%, #1a1d24 100%);
+            color: #ccc;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* Optional grain overlay */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://www.transparenttextures.com/patterns/noise.png');
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* HEADER */
+        .header {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .links a {
+            color: #ccc;
+            margin-left: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .header .links a:hover {
+            color: #900;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            color: #eee;
+            text-shadow: 0 0 5px #900;
+            animation: flicker 4s infinite;
+        }
+
+        .hero-text p {
+            max-width: 500px;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #bbb;
+        }
+
+        .hero-text button {
+            margin-top: 30px;
+            padding: 12px 28px;
+            background: #900;
+            color: #eee;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .hero-text button:hover {
+            background: crimson;
+            cursor: pointer;
+        }
+
+        /* IMAGE */
+        .hero-image img {
+            border-radius: 10px;
+            box-shadow: 0 0 10px #000;
+            transition: 0.5s;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.05);
+            filter: brightness(0.8);
+        }
+
+        /* INFO CARDS */
+        .info {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .info h2 {
+            font-size: 32px;
+            color: #eee;
+            margin-bottom: 40px;
+            text-shadow: 0 0 3px #900;
+        }
+
+        .info-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card img {
+            width: 220px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 6px;
+            transition: 0.4s;
+        }
+
+        .card img:hover {
+            transform: scale(1.1);
+            filter: brightness(0.7) contrast(1.2);
+        }
+
+        .card p {
+            margin-top: 10px;
+            max-width: 220px;
+        }
+
+        /* QUOTE */
+        .quote {
+            background: rgba(10, 10, 10, 0.7);
+            text-align: center;
+            padding: 80px;
+            font-style: italic;
+            color: #ddd;
+        }
+
+        /* CTA */
+        .cta {
+            background: #900;
+            color: #eee;
+            margin: 60px 100px;
+            padding: 40px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cta-text p {
+            margin-top: 10px;
+        }
+
+        .cta button {
+            background: transparent;
+            color: #eee;
+            border: 2px solid #eee;
+            padding: 12px 28px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .cta button:hover {
+            background: #eee;
+            color: #900;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* FLICKER KEYFRAMES */
+        @keyframes flicker {
+
+            0%,
+            19%,
+            21%,
+            23%,
+            25%,
+            54%,
+            56%,
+            100% {
+                opacity: 1;
+            }
+
+            20%,
+            22%,
+            55% {
+                opacity: 0.3;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- /* header */ -->
+
+    <div class="header">
+        <div class="logo"><img
+                src="https://tse1.mm.bing.net/th/id/OIP.nirQEl5lMG_D8DGUQdnspgHaHU?r=0&cb=thvnextc1&rs=1&pid=ImgDetMain&o=7&rm=3"
+                alt="logo" height="75px" width="75px">
+            <div class="links">
+                <a href="#">Home ⌂</a>
+                <a href="#">Setting ⚙ </a>
+                <a href="#">Quit ✕</a>
+            </div>
+        </div>
+
+        <!-- hero -->
+
+        <div class="hero">
+            <div class="hero text">
+                <h1>Welcome back to Silent Hill…</h1>
+                <p>Where guilt takes form,
+                    where nightmares breathe,
+                    and where your past is waiting — just beyond the fog.
+
+                    Will you uncover the truth… or lose yourself to the darkness?</p>
+                <button>PLAY</button>
+            </div>
+            <div class="hero imgae">
+                <div class="imageplaceholder">
+                    <img src="https://images3.alphacoders.com/137/1379106.jpg" alt="silent hill 2" height="250px"
+                        width="450px">
+                </div>
+            </div>
+        </div>
+
+        <!-- information -->
+
+        <div class="info">
+            <h2>Some random information</h2>
+            <div class="info-cards">
+                <div class="card">
+                    <img src="https://images5.alphacoders.com/137/1379103.jpg" alt="imgage1" height="150px"
+                        width="250px">
+                    <p>It’s quiet here… too quiet to be safe</p>
+                </div>
+                <div class="card">
+                    <img src="https://images3.alphacoders.com/137/1379100.jpg" alt="image2" height="150px"
+                        width="250px">
+                    <p>Sometimes the monsters look just like us</p>
+                </div>
+                <div class="card">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.7rjt-XEJR9R5GiX1_tOFMQHaEK?r=0&cb=thvnextc1&rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="image3" height="150px" width="250px">
+                    <p>Running from the truth won’t save you</p>
+                </div>
+                <div class="card">
+                    <img src="https://cdn.mos.cms.futurecdn.net/poAiT9PGbEZjNZHHDGieX5.jpg" alt="image4" height="150px"
+                        width="250px">
+                    <p>What you fear is waiting… and it knows your name</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- quote -->
+
+        <div class="quote">
+            <p>“This place is like a junkyard. It's full of lost and discarded things, just like me.” </p>
+            <h3>- James Sunderland</h3>
+        </div>
+
+        <!-- sign up -->
+
+        <div class="cta">
+            <div class="cta text">
+                <h3>Call to action! It's time!</h3>
+                <p>Dare to uncover the horrors?
+                    Enter if you’re not afraid of the truth!</p>
+            </div>
+            <button>Descend Into Silence</button>
+        </div>
+
+        <!-- Footer -->
+
+        <div class="footer">
+            Copyright © Team Silent 2001
+        </div>
+</body>
+
+</html>
